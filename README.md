@@ -1,6 +1,5 @@
-# Branch syncing with GitHub workflows :star2:
-
-Example of a `7.x` branch that follows a `main` branch.
+# Branch syncing with GitHub workflows :star2:\n
+Example of a `7.x` branch that follows a `main` branch: [workflow code](/.github/workflows/branch-syncing.yml)
 
 ```yml
 name: Update 7.x ref to main

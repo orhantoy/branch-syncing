@@ -1,0 +1,24 @@
+name: Render README
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        echo "# Branch syncing with GitHub workflows :star2:\n" > README.md
+        echo 'Example of a `7.x` branch that follows a `main` branch: [workflow code](/.github/workflows/branch-syncing.yml)' >> README.md
+        echo '' >> README.md
+        echo '```yml' >> README.md
+        cat .github/workflows/branch-syncing.yml >> README.md
+        echo '```' >> README.md
+        
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        
+        git add README.md
+        git diff-index --quiet HEAD || git commit -m 'Update README with branch-syncing workflow' && git push

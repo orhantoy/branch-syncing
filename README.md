@@ -1,4 +1,4 @@
-# Branch syncing with GitHub workflows
+# Branch syncing with GitHub workflows :star2:
 
 Example of a `7.x` branch that follows a `main` branch.
 

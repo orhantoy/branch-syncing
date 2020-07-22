@@ -10,7 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo "# Branch syncing with GitHub workflows :star2:\n" > README.md
+        echo "# Branch syncing with GitHub workflows :star2:" > README.md
+        echo '' >> README.md
         echo 'Example of a `7.x` branch that follows a `main` branch: [workflow code](/.github/workflows/branch-syncing.yml)' >> README.md
         echo '' >> README.md
         echo '```yml' >> README.md
